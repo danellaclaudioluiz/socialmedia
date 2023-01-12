@@ -32,6 +32,12 @@ const UserSchema = new mongoose.Schema({
         type: Array,
         default: []
     },
-    friends: String,
-    ocupation:
-});
+    location: String,
+    ocupation: String,
+    viewedProfile: Number,
+    impressions: Number,
+}, { timestamps: true });
+
+const User = mongoose.model("User", UserSchema);
+
+export default User;
